@@ -1,4 +1,4 @@
 node_modules/
 dist/
 *.tsbuildinfo
-build.css
+/public/styles/build.css
