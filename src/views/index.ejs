@@ -9,5 +9,6 @@
   <body class="bg-slate-950 h-screen flex flex-col items-center gap-5 p-10">
     <% messages.forEach((message) => { %> <%- include('message', { message:
     message }) %> <% }); %>
+    <a href="/new" class="text-white">New Message</a>
   </body>
 </html>

@@ -8,6 +8,7 @@
   </head>
   <body class="bg-slate-950 h-screen flex justify-center text-white">
     <form
+      id="myForm"
       method="POST"
       action="/new"
       class="bg-gray-700 h-fit w-[400px] min-w-fit mt-20 rounded-tr-xl rounded-tl-xl flex flex-col"
@@ -49,7 +50,7 @@
             href="/"
             class="justify-center items-center self-end p-4 mt-5 bg-blue-700 rounded-full text-sm hover:cursor-pointer hover:bg-blue-800"
           >
-            See messages
+            Go back
           </a>
           <button
             type="submit"
@@ -60,6 +61,8 @@
         </div>
       </div>
     </form>
+
+    <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>
 
