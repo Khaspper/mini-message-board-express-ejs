@@ -21,6 +21,7 @@ const messages = [
 ];
 
 app.locals.messages = messages;
+app.use(express.json());
 
 // Static imports
 app.use(express.static(path.join(__dirname, "public")));

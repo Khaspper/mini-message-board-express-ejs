@@ -8,7 +8,14 @@ newMessageRouter.get("/", (req, res) => {
 });
 
 newMessageRouter.post("/", (req, res) => {
-  res.status(201).send("Ok!");
+  const { text, user, added } = req.body;
+  const message = {
+    text,
+    user,
+    added: new Date(added),
+  };
+  req.app.locals.messages.push(message);
+  res.status(201).send("ok");
 });
 
 export default newMessageRouter;
