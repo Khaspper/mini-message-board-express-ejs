@@ -27,4 +27,3 @@ form.addEventListener("submit", async (e) => {
     alert("An error occurred: " + error.message);
   }
 });
-//TODO: The payload isn't sending it to the post request
