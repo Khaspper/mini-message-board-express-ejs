@@ -6,7 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/build.css" />
   </head>
-  <body class="bg-zinc-800 h-screen flex justify-center">
-    <div class="w-[200px] sm:w-[400px] h-screen border-2"></div>
+  <body class="bg-zinc-800 h-screen flex flex-col items-center">
+    <% messages.forEach((message) => { %>
+      <%- include('message', { message: message }) %>
+    <% }); %>
   </body>
 </html>
