@@ -20,6 +20,11 @@ const messages = [
   },
 ];
 
+app.locals.messages = messages;
+
+// Static imports
+app.use(express.static(path.join(__dirname, "public")));
+
 // Routers
 app.use("/", indexRouter);
 app.use("/new", newMessageRouter);
