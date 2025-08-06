@@ -190,9 +190,6 @@
   .w-3xs {
     width: var(--container-3xs);
   }
-  .w-\[200px\] {
-    width: 200px;
-  }
   .flex-col {
     flex-direction: column;
   }

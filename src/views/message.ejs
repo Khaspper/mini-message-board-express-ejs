@@ -1,4 +1,4 @@
 <div class="border-2 w-3xs md:w-sm">
     <p><%= message.user %> <%= message.added.toLocaleDateString(undefined, {  year: "numeric", month: "short", day: "numeric"}) %> <%- message.added.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" }) %></p>
-    <p class="container border-2 h-[100px]">message.text</p>
+    <p class="container border-2 h-[100px]"><%= message.text %></p>
 </div>
