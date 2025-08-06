@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/build.css" />
+    <title><%= title %></title>
+  </head>
+  <body class="bg-slate-950 h-screen flex justify-center text-white">
+    <form
+      method="POST"
+      action="/new"
+      class="bg-gray-700 h-fit w-[400px] min-w-fit mt-20 rounded-tr-xl rounded-tl-xl flex flex-col"
+    >
+      <div
+        class="flex justify-center items-center p-5 border-b-1 border-zinc-600"
+      >
+        <header><p class="text-2xl">New message</p></header>
+      </div>
+      <div class="p-5 flex flex-col">
+        <div class="flex border-zinc-600 flex-col gap-2">
+          <label for="user">
+            <input
+              type="text"
+              id="user"
+              name="user"
+              placeholder="Enter your name here..."
+              class="border-none outline-none focus:ring-0"
+            />
+          </label>
+          <p class="text-sm text-zinc-400">
+            <%= date.toLocaleDateString(undefined, { year: "numeric", month:
+            "short", day: "numeric"}) %> <%=date.toLocaleTimeString("en-US", {
+            hour: "2-digit", minute: "2-digit" }) %>
+          </p>
+        </div>
+        <label for="text">
+          <textarea
+            id="text"
+            name="text"
+            rows="8"
+            cols="40"
+            placeholder="Enter your comments here..."
+            class="resize-none outline-none focus:ring-0 border-1 container mt-5 border-zinc-600 rounded-lg p-5"
+          ></textarea>
+        </label>
+        <div class="flex justify-between">
+          <a
+            href="/"
+            class="justify-center items-center self-end p-4 mt-5 bg-blue-700 rounded-full text-sm hover:cursor-pointer hover:bg-blue-800"
+          >
+            See messages
+          </a>
+          <button
+            type="submit"
+            class="justify-center items-center self-end p-4 mt-5 bg-blue-700 rounded-full text-sm hover:cursor-pointer hover:bg-blue-800"
+          >
+            Send message
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
