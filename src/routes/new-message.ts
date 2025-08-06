@@ -8,3 +8,5 @@ newMessageRouter.get("/", (req, res) => {
 });
 
 export default newMessageRouter;
+
+//TODO: Hook up the post request!!!!!
