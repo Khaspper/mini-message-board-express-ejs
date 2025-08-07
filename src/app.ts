@@ -4,7 +4,7 @@ import indexRouter from "./routes";
 import newMessageRouter from "./routes/new-message";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 type TMessage = {
   text: string;
