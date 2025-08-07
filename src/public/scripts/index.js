@@ -1,6 +1,13 @@
 const form = document.getElementById("myForm");
 const newDate = new Date();
 form.addEventListener("submit", async (e) => {
+  if (!form.checkValidity()) {
+    // this will trigger the built-in UI (red outlines, tooltips, etc.)
+    console.log("nope");
+    form.reportValidity();
+    return;
+  }
+
   e.preventDefault();
   const formData = new FormData(e.target);
   const payLoad = {

@@ -4,21 +4,16 @@ import indexRouter from "./routes";
 import newMessageRouter from "./routes/new-message";
 
 const app = express();
-const PORT = Number(process.env.PORT) || 3000;
+const PORT = 3000;
+
+type TMessage = {
+  text: string;
+  user: string;
+  added: Date;
+};
 
 // Variables
-const messages = [
-  {
-    text: "Hi there!",
-    user: "Gumball",
-    added: new Date(),
-  },
-  {
-    text: "Hello World!",
-    user: "Darwin",
-    added: new Date(),
-  },
-];
+const messages: TMessage[] = [];
 
 app.locals.messages = messages;
 app.use(express.json());
