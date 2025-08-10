@@ -1,6 +1,6 @@
 <div class="w-3xs md:w-sm text-white flex flex-col gap-2">
   <p>
-    <%= message.user %>
+    <%= message.username %>
     <span class="text-xs text-zinc-500">
       <%= message.added.toLocaleDateString(undefined, { year: "numeric", month:
       "short", day: "numeric"}) %> <%- message.added.toLocaleTimeString("en-US",
@@ -8,6 +8,6 @@
     </span>
   </p>
   <p class="rounded-b-lg rounded-tr-lg bg-zinc-700 p-5 w-fit h-fit">
-    <%= message.text %>
+    <%= message.message %>
   </p>
 </div>

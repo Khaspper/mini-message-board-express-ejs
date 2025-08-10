@@ -25,8 +25,11 @@
   },
   "homepage": "https://github.com/Khaspper/mini-message-board-express-ejs#readme",
   "dependencies": {
+    "@types/pg": "^8.15.5",
+    "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.11",

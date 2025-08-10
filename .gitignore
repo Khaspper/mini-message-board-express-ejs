@@ -2,3 +2,4 @@ node_modules/
 dist/
 *.tsbuildinfo
 /public/styles/build.css
+.env

@@ -11,8 +11,8 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const payLoad = {
-    text: formData.get("text"),
-    user: formData.get("user"),
+    message: formData.get("message"),
+    username: formData.get("username"),
     added: newDate,
   };
 

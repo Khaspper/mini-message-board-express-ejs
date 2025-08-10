@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { createNewMessage } from "../controllers/newMessageController";
 
 const newMessageRouter = Router();
 
@@ -7,15 +8,6 @@ newMessageRouter.get("/", (req, res) => {
   res.render("form", { title: "New Message", date: date });
 });
 
-newMessageRouter.post("/", (req, res) => {
-  const { text, user, added } = req.body;
-  const message = {
-    text,
-    user,
-    added: new Date(added),
-  };
-  req.app.locals.messages.push(message);
-  res.status(201).send("ok");
-});
+newMessageRouter.post("/", createNewMessage);
 
 export default newMessageRouter;

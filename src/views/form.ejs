@@ -20,11 +20,11 @@
       </div>
       <div class="p-5 flex flex-col">
         <div class="flex border-zinc-600 flex-col gap-2">
-          <label for="user">
+          <label for="username">
             <input
               type="text"
-              id="user"
-              name="user"
+              id="username"
+              name="username"
               placeholder="Enter your name here..."
               required
               class="border-none outline-none focus:ring-0"
@@ -36,13 +36,14 @@
             hour: "2-digit", minute: "2-digit" }) %>
           </p>
         </div>
-        <label for="text">
+        <label for="message">
           <textarea
-            id="text"
-            name="text"
+            id="message"
+            name="message"
             rows="8"
             cols="40"
             placeholder="Enter your comments here..."
+            maxlength="200"
             required
             class="resize-none outline-none focus:ring-0 border-1 container mt-5 border-zinc-600 rounded-lg p-5"
           ></textarea>

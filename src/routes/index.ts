@@ -1,8 +1,8 @@
 import { Router } from "express";
+import { getMessages } from "../controllers/indexController";
+
 const indexRouter = Router();
 
-indexRouter.get("/", (req, res) => {
-  res.render("index", { title: "Message Board" });
-});
+indexRouter.get("/", getMessages);
 
 export default indexRouter;
