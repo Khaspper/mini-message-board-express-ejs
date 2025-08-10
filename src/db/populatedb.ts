@@ -9,9 +9,9 @@ const message = "This is the NEWEST TEST!!!";
 async function main() {
   console.log("Seeding...");
   const connectionString =
-    process.env.DATABASE_URL ||
+    process.env.DATABASE_PUBLIC_URL ||
     process.argv[2] ||
-    process.env.LOCAL_DATABASE_URL;
+    process.env.DATABASE_PUBLIC_URL;
   const client = new Client({
     connectionString,
   });
