@@ -3,3 +3,4 @@ dist/
 *.tsbuildinfo
 /public/styles/build.css
 .env
+.vscode

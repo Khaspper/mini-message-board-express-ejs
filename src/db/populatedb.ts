@@ -8,19 +8,17 @@ const message = "This is the NEWEST TEST!!!";
 
 async function main() {
   console.log("Seeding...");
-  const connectionString =
-    process.env.DATABASE_PUBLIC_URL ||
-    process.argv[2] ||
-    process.env.DATABASE_PUBLIC_URL;
+  const connectionString = process.env.DATABASE_URL || process.argv[2];
   const client = new Client({
     connectionString,
+    ssl: { rejectUnauthorized: false },
   });
   await client.connect();
   await client.query(
     `CREATE TABLE IF NOT EXISTS messages (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     username VARCHAR ( 255 ),
-    added DATE,
+    added TIMESTAMPTZ DEFAULT NOW(),
     message VARCHAR( 200 ));`
   );
   await client.query(
