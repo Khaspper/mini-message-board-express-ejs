@@ -3,14 +3,11 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-// All of the following properties should be read from environment variables
-// We're hardcoding them here for simplicity
 const pool = new Pool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  database: process.env.DB_DATABASE,
-  password: process.env.DB_PASSWORD,
-  port: Number(process.env.DB_PORT), // The default port
+  connectionString:
+    process.env.DATABASE_URL ||
+    "postgresql://postgres:AYpWzYgiIUOfohydanwbEGKixLXpGThx@postgres.railway.internal:5432/railway",
+  ssl: { rejectUnauthorized: false },
 });
 
 export default pool;
