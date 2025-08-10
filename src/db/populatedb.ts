@@ -8,7 +8,8 @@ const message = "This is the NEWEST TEST!!!";
 
 async function main() {
   console.log("Seeding...");
-  const connectionString = process.env.DATABASE_URL || process.argv[2];
+  const connectionString =
+    "postgresql://postgres:AYpWzYgiIUOfohydanwbEGKixLXpGThx@postgres.railway.internal:5432/railway";
   const client = new Client({
     connectionString,
     ssl: { rejectUnauthorized: false },
